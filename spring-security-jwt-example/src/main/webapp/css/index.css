@@ -1,0 +1,40 @@
+.featured-items {
+	
+}
+
+.fresh-items {
+	
+}
+
+.front-slider .carousel-item {
+	height: 30em;
+}
+
+footer{
+	color:black;
+}
+h6 {
+	color: rgb(153, 40, 59);
+}
+
+.banner {
+	margin-top: 1em;
+}
+
+.front-slider {
+	margin-top: 2em;
+	width: 100%;
+	margin-top: 2em;
+}
+
+.nav-link {
+	color: black;
+}
+
+.dropdown-item:hover {
+	color: blue;
+}
+
+.featured-items .carousel-item {
+	
+}

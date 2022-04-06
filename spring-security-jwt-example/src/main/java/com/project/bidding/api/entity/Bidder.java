@@ -1,11 +1,16 @@
 package com.project.bidding.api.entity;
 
+import java.util.Collection;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 @Entity
 @Table(name="Bidder")
-public class Bidder {
+public class Bidder implements UserDetails{
 	@Id
 	private String bidderEmail;
 	private String bidderFirstName;
@@ -60,6 +65,37 @@ public class Bidder {
 	}
 	public void setBidderPassword(String bidderPassword) {
 		this.bidderPassword = bidderPassword;
+	}
+	@Override
+	public Collection<? extends GrantedAuthority> getAuthorities() {
+		return null;
+	}
+	@Override
+	public String getPassword() {
+		return bidderPassword;
+	}
+	@Override
+	public String getUsername() {
+		return bidderEmail;
+	}
+	@Override
+	public boolean isAccountNonExpired() {
+		return true;
+	}
+	@Override
+	public boolean isAccountNonLocked() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+	@Override
+	public boolean isCredentialsNonExpired() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+	@Override
+	public boolean isEnabled() {
+		// TODO Auto-generated method stub
+		return true;
 	}
 	
 	
